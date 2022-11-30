@@ -104,6 +104,7 @@ if option == "По дню недели и времени":
 if option == 'По полу человека':
     st.header("Сравнение количества мужчин и женщин по дням недели")
     fig4 = px.scatter(tips, x='tip', y='day',color='sex')
+    fig4.update_traces(marker=dict(size=12))
     fig4.update_layout(margin=dict(l=5,r=5,b=10,t=10))
     st.write(fig4)
 
